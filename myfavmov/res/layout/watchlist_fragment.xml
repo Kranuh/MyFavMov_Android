@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dcdcdc" >
+
+    <View
+        android:id="@+id/watchlistfragment_actionbar_view"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/actionbar_bg_full" />
+
+    <ListView
+        android:id="@+id/watchlistfragment_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/watchlistfragment_actionbar_view"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:dividerHeight="0dp"
+        android:divider="@null" >
+    </ListView>
+
+    <com.timkranen.fonthelpers.TypefaceTextView
+        android:id="@+id/watchlistfragment_nomoviestxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No movies in watchlist"
+        android:textColor="@color/mfm_darkgrey"
+        android:textSize="10pt"
+        geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF"
+        android:visibility="gone" />
+
+</RelativeLayout>

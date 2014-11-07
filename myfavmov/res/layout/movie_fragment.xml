@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#dcdcdc"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/actionbar_bg_full" />
+
+    <ViewSwitcher
+        android:id="@+id/movfragment_header_viewswitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" >
+
+        <RelativeLayout
+            android:id="@+id/movfragment_backdrop_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.timkranen.parallaxview.ParallaxImageView
+                android:id="@+id/movfragment_backdrop_img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#dcdcdc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nobackdrop" >
+            </com.timkranen.parallaxview.ParallaxImageView>
+
+            <ImageView
+                android:id="@+id/movfragment_poster_img"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@id/movfragment_backdrop_img"
+                android:background="#3F000000" >
+
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_movtitle_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="8pt"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movfragment_trailer_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <VideoView
+                android:id="@+id/movfragment_trailer_videoview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </ViewSwitcher>
+
+    <ScrollView
+        android:id="@+id/movfragment_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/movfragment_trailer_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_card"
+                android:visibility="gone" >
+
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_trailer_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:text="Watch Trailer"
+                    android:textColor="@color/mfm_orange"
+                    android:textSize="8pt"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/movfragment_globalinfo_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_card" >
+
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_geninfo_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:text="General Info"
+                    android:textColor="@color/mfm_orange"
+                    android:textSize="8pt"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+                <View
+                    android:id="@+id/movfragment_geninfo_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@id/movfragment_geninfo_txt"
+                    android:layout_margin="4dp"
+                    android:background="#dcdcdc" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/movfragment_geninfo_line"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:weightSum="100" >
+
+                    <LinearLayout
+                        android:id="@+id/movfragment_geninfo_labels"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="100"
+                        android:orientation="vertical" >
+
+                        <com.timkranen.fonthelpers.TypefaceTextView
+                            android:id="@+id/movfragment_geninfo_label_release"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:text="Release Date:"
+                            android:textColor="#969696"
+                            android:textSize="7pt"
+                            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+                        <com.timkranen.fonthelpers.TypefaceTextView
+                            android:id="@+id/movfragment_geninfo_label_runtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:text="Runtime:"
+                            android:textColor="#969696"
+                            android:textSize="7pt"
+                            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+                        <com.timkranen.fonthelpers.TypefaceTextView
+                            android:id="@+id/movfragment_geninfo_label_genre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:text="Genre(s):"
+                            android:textColor="#969696"
+                            android:textSize="7pt"
+                            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0"
+                        android:background="@drawable/simple_circle" >
+
+                        <com.timkranen.fonthelpers.TypefaceTextView
+                            android:id="@+id/movfragment_geninfo_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="2dp"
+                            android:text=""
+                            android:textColor="#ffffff"
+                            android:textSize="9pt"
+                            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/movfragment_synopsis_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_card"
+                android:paddingBottom="14dp" >
+
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_synopsis_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:text="Synopsis"
+                    android:textColor="@color/mfm_orange"
+                    android:textSize="8pt"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+                <View
+                    android:id="@+id/movfragment_synopsis_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@id/movfragment_synopsis_label"
+                    android:layout_margin="4dp"
+                    android:background="#dcdcdc" />
+
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_synopsis_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/movfragment_synopsis_line"
+                    android:layout_margin="3dp"
+                    android:gravity="left"
+                    android:textColor="#969696"
+                    android:textSize="7pt"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/movfragment_cast_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_card"
+                android:paddingBottom="14dp" >
+
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_cast_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:text="Cast"
+                    android:textColor="@color/mfm_orange"
+                    android:textSize="8pt"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+                <View
+                    android:id="@+id/movfragment_cast_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height=".5dp"
+                    android:layout_below="@id/movfragment_cast_txt"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#dcdcdc" />
+
+                <com.meetme.android.horizontallistview.HorizontalListView
+                    android:id="@+id/movfragment_cast_castlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/movfragment_cast_line"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    widget:dividerWidth="2dp" >
+                </com.meetme.android.horizontallistview.HorizontalListView>
+
+                <ProgressBar
+                    android:id="@+id/movfragment_cast_progressbar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/movfragment_cast_line"
+                    android:layout_centerHorizontal="true" />
+                
+                <com.timkranen.fonthelpers.TypefaceTextView
+                    android:id="@+id/movfragment_cast_nocast_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/movfragment_cast_line"
+                    android:layout_margin="3dp"
+                    android:textColor="#969696"
+                    android:textSize="7pt"
+                    android:layout_centerHorizontal="true"
+                    android:text="No cast found"
+                    android:visibility="invisible"
+                    geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

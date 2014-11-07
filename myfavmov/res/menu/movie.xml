@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:showAsAction="ifRoom"
+        android:actionViewClass="android.widget.SearchView"
+        android:title="Search"/>
+    <item
+        android:id="@+id/add_to_watchlist"
+        android:icon="@drawable/ic_action_watchlist"
+        android:showAsAction="ifRoom"
+        android:title="Add To Watchlist"
+        android:visible="false" />
+    
+    <item
+        android:id="@+id/delete_from_watchlist"
+        android:icon="@drawable/ic_delete_from_watchlist"
+        android:showAsAction="ifRoom"
+        android:title="Delete From Watchlist"
+        android:visible="false"/>
+
+</menu>
