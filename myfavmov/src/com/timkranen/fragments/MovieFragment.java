@@ -81,6 +81,7 @@ public class MovieFragment extends Fragment {
 				false);
 		((MovieActivity) getActivity()).setActionBarTitle("");
 		setMovie();
+		setHasOptionsMenu(true);
 		initComponents();
 		MovieFetcher mFetcher = new MovieFetcher();
 		mFetcher.execute();

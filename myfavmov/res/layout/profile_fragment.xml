@@ -1,13 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#dedede"
     android:orientation="vertical" >
 
+    <com.timkranen.parallaxview.ParallaxImageView
+        android:id="@+id/statfragment_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" >
+    </com.timkranen.parallaxview.ParallaxImageView>
+
     <View
+        android:id="@+id/actionbarview"
         android:layout_width="fill_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@drawable/actionbar_bg_full" />
 
-</LinearLayout>
+    <View
+        android:id="@+id/topview"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_below="@id/actionbarview" />
+
+    <!-- This is the layout for rating/year -->
+
+    <LinearLayout
+        android:id="@+id/statfragment_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topview"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50" >
+
+            <View
+                android:id="@+id/statfragment_rating_circle"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/simple_circle_white" />
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="7.6"
+                android:textColor="#f80"
+                android:textSize="13pt"
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_rating_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statfragment_rating_circle"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="20dp"
+                android:text="Average IMDB rating"
+                android:textColor="#fff"
+                android:textSize="7pt"
+                geekui:customTypeface="fonts/ROBOTO-REGULAR.TTF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50" >
+
+            <View
+                android:id="@+id/statfragment_year_circle"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/simple_circle_white" />
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1999"
+                android:textColor="#F80"
+                android:textSize="11pt"
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_year_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statfragment_year_circle"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="20dp"
+                android:text="Average release year"
+                android:textColor="#fff"
+                android:textSize="7pt"
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- End rating/year layout -->
+
+    <View
+        android:id="@+id/statfragment_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/statfragment_top_layout"
+        android:layout_margin="8dp"
+        android:background="#f80" />
+
+    <com.timkranen.fonthelpers.TypefaceTextView
+        android:id="@+id/statfragment_genre_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statfragment_divider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="Your favorite genres"
+        android:textColor="#ffffff"
+        android:textSize="7pt"
+        geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+
+    <!-- bar starts -->
+
+    <RelativeLayout
+        android:id="@+id/statfragment_barlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statfragment_genre_label"
+        android:layout_marginTop="3dp" >
+
+        <FrameLayout
+            android:id="@+id/statfragment_firstgenre_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:background="#fff"
+            android:padding="2dp" >
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_firstgenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fantasy (13)"
+                android:textColor="#f80"
+                android:textSize="7pt"
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/statfragment_genrebar1"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#fff"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statfragment_barlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statfragment_barlayout1" >
+
+        <FrameLayout
+            android:id="@+id/statfragment_secondgenre_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:background="#3F000000"
+            android:padding="2dp" >
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_secondgenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action (9)"
+                android:textColor="#ffffff"
+                android:textSize="7pt"
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/statfragment_genrebar2"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="3dp"
+            android:background="#fff"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statfragment_barlayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statfragment_barlayout2" >
+
+        <FrameLayout
+            android:id="@+id/statfragment_thirdgenre_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:background="#3F000000"
+            android:padding="2dp" >
+
+            <com.timkranen.fonthelpers.TypefaceTextView
+                android:id="@+id/statfragment_thirdgenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thriller (1)"
+                android:textColor="#ffffff"
+                android:textSize="7pt"
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/statfragment_genrebar3"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="3dp"
+            android:background="#fff"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>
