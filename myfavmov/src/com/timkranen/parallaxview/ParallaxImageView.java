@@ -11,8 +11,6 @@ import android.hardware.SensorManager;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.nvanbenschoten.motion.R;
-
 /*
  * Copyright 2014 Nathan VanBenschoten
  *

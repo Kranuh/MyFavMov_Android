@@ -1,8 +1,11 @@
 package com.timkranen.tmdb.domain;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -12,9 +15,19 @@ import com.timkranen.tools.GenreComparator;
 
 public class Statistic {
 	private int watchCount; // number of movies 'watched'
-	private List<String> allGenres; // all genres that have been 'watched'
-	private List<Integer> allReleaseDates; // all release dates
+	private List<String> allGenres = new ArrayList<String>(); // all genres that have been 'watched'
+	private List<Integer> allReleaseDates = new ArrayList<Integer>(); // all release dates
 	private double communalRating;
+	
+	/*
+	 * no args for gson don't use
+	 */
+	public Statistic() {
+	}
+	
+	public boolean isFilled() {
+		return allGenres.size() > 0;
+	}
 	
 	public void setWatchCount(int watchCount) {
 		this.watchCount = watchCount;
@@ -56,7 +69,7 @@ public class Statistic {
 
 		// add release date in proper manner
 		if (!releaseDate.isEmpty()) {
-			String year = releaseDate.substring(0, 3);
+			String year = releaseDate.substring(0, 4);
 			try {
 				int numYear = Integer.parseInt(year);
 				allReleaseDates.add(numYear);
@@ -70,10 +83,12 @@ public class Statistic {
 	}
 
 	public double getAvgRating() {
-		return communalRating / watchCount;
+		double avg = communalRating / watchCount;
+		DecimalFormat dFormat = new DecimalFormat("#.#");
+		return Double.valueOf(dFormat.format(avg));
 	}
 	
-	public Map<String, Integer> getFavGenres() {
+	public List<Map.Entry<String, Integer>> getFavGenres() { //bad practice but its doable because the list is super tiny
 		//create occurency map
 		Set<String> uniqueOcc = new HashSet<String>(this.allGenres);
 		Map<String, Integer> occMap = new HashMap<String, Integer>(); //string is genre name, integer is occurency
@@ -86,23 +101,27 @@ public class Statistic {
 		TreeMap<String, Integer> sortedMap = new TreeMap<String, Integer>(gc);
 		sortedMap.putAll(occMap);
 		
+		
 		//return the first three of the treemap
+		List<Map.Entry<String, Integer>> topList = new ArrayList<Map.Entry<String, Integer>>();
 		int i = 0;
-		Map<String, Integer> topMap = new HashMap<String, Integer>();
 		for(Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
 			if(i <= 2) {
-				topMap.put(entry.getKey(), entry.getValue());
+				topList.add(i, entry);
+				i++;
 			} else {
 				break;
 			}
 		}
 		
-		return topMap;
+		
+		
+		return topList;
 	}
 	
 	public int getAvgReleaseDate() {
 		int totalDate = 0;
-		for(Integer i : allReleaseDates) {
+		for(int i = 0; i < allReleaseDates.size(); i++) {
 			totalDate += allReleaseDates.get(i);
 		}
 		

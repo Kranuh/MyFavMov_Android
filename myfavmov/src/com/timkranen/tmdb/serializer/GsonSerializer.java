@@ -11,6 +11,7 @@ import com.google.gson.reflect.TypeToken;
 import com.timkranen.tmdb.domain.ImdbMovie;
 import com.timkranen.tmdb.domain.Movie;
 import com.timkranen.tmdb.domain.ResultsPage;
+import com.timkranen.tmdb.domain.Statistic;
 import com.timkranen.tmdb.domain.TmdbMovie;
 
 public class GsonSerializer {
@@ -53,6 +54,18 @@ public class GsonSerializer {
 		Type listOfMovies = new TypeToken<List<Movie>>(){}.getType();
 		List<Movie> movies = gson.fromJson(json, listOfMovies);
 		return movies;
+	}
+	
+	public static Statistic jsonToStatistic(String json) {
+		Gson gson = new Gson();
+		Statistic stat = (Statistic) gson.fromJson(json, Statistic.class);
+		return stat;
+	}
+	
+	public static String StatisticToJson(Statistic s) {
+		Gson gson = new Gson();
+		String json = gson.toJson(s, Statistic.class);
+		return json;
 	}
 
 	public static String fromMovieList(List<Movie> movieList) {

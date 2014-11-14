@@ -12,6 +12,8 @@
         android:layout_height="fill_parent"
         android:scaleType="centerCrop" >
     </com.timkranen.parallaxview.ParallaxImageView>
+    
+    
 
     <View
         android:id="@+id/actionbarview"
@@ -55,7 +57,7 @@
                 android:layout_centerInParent="true"
                 android:text="7.6"
                 android:textColor="#f80"
-                android:textSize="13pt"
+                android:textSize="11pt"
                 geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
 
             <com.timkranen.fonthelpers.TypefaceTextView
@@ -68,7 +70,7 @@
                 android:text="Average IMDB rating"
                 android:textColor="#fff"
                 android:textSize="7pt"
-                geekui:customTypeface="fonts/ROBOTO-REGULAR.TTF" />
+                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -153,7 +155,7 @@
                 android:id="@+id/statfragment_firstgenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fantasy (13)"
+                android:text=""
                 android:textColor="#f80"
                 android:textSize="7pt"
                 geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
@@ -180,15 +182,15 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="2dp"
-            android:background="#3F000000"
+            android:background="#fff"
             android:padding="2dp" >
 
             <com.timkranen.fonthelpers.TypefaceTextView
                 android:id="@+id/statfragment_secondgenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Action (9)"
-                android:textColor="#ffffff"
+                android:text=""
+                android:textColor="#f80"
                 android:textSize="7pt"
                 geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
         </FrameLayout>
@@ -215,15 +217,15 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="2dp"
-            android:background="#3F000000"
+            android:background="#fff"
             android:padding="2dp" >
 
             <com.timkranen.fonthelpers.TypefaceTextView
                 android:id="@+id/statfragment_thirdgenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thriller (1)"
-                android:textColor="#ffffff"
+                android:text=""
+                android:textColor="#f80"
                 android:textSize="7pt"
                 geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
         </FrameLayout>
@@ -236,5 +238,27 @@
             android:background="#fff"
             android:visibility="invisible" />
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/statfragment_nostats"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/nomovstat"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    
+     <com.timkranen.fonthelpers.TypefaceTextView
+        android:id="@+id/statfragment_nostats_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statfragment_nostats"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="You haven't watched any movies yet"
+        android:textColor="#ffffff"
+        android:textSize="8pt"
+        geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF"
+        android:visibility="gone" />
 
 </RelativeLayout>

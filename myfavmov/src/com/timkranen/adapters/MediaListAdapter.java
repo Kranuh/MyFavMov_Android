@@ -17,7 +17,7 @@ import com.timkranen.tmdb.domain.Media;
 import com.timkranen.tools.PicassoTool;
 
 public class MediaListAdapter extends ArrayAdapter<Media> {
-	
+
 	private List<Media> objects;
 	private Context context;
 
@@ -26,29 +26,30 @@ public class MediaListAdapter extends ArrayAdapter<Media> {
 		this.context = context;
 		this.objects = objects;
 	}
-	
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 		View rowView = inflater.inflate(R.layout.media_listitem, null);
-		
-		ImageView img = (ImageView) rowView.findViewById(R.id.media_listitem_img);
+
+		ImageView img = (ImageView) rowView
+				.findViewById(R.id.media_listitem_img);
 		TextView txt = (TextView) rowView.findViewById(R.id.media_listitem_txt);
-		
+
 		Media m = objects.get(position);
-		
-		if(m.getImg() != null) {
+
+		if (m.getImg() != null) {
 			img.setImageBitmap(m.getImg());
 		} else {
 			img.setImageResource(R.drawable.noactorimg);
 		}
-		
-		if(m.getTxt() != null || !m.getTxt().isEmpty()) {
+
+		if (m.getTxt() != null || !m.getTxt().isEmpty()) {
 			txt.setText(m.getTxt());
 		}
-		
+
 		return rowView;
-		
+
 	}
 
 }

@@ -14,14 +14,17 @@ import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 
 import com.timkranen.fragments.MovieFragment;
+import com.timkranen.tmdb.domain.ImdbMovie;
 import com.timkranen.tmdb.domain.Movie;
 import com.timkranen.tools.LocalStorageTool;
+import com.timkranen.tools.StatTool;
 
 public class MovieActivity extends Activity {
 
 	int movieId;
 
 	private Movie localMovie = new Movie();
+	private ImdbMovie localImdbMovie;
 	private boolean localMovieIsSet = false;
 
 	@Override
@@ -71,7 +74,8 @@ public class MovieActivity extends Activity {
 
 			@Override
 			public boolean onQueryTextSubmit(String query) {
-				Intent intent = new Intent(MovieActivity.this, MainActivity.class);
+				Intent intent = new Intent(MovieActivity.this,
+						MainActivity.class);
 				intent.setAction("android.intent.action.SEARCH");
 				intent.putExtra(SearchManager.QUERY, query);
 				startActivity(intent);
@@ -92,7 +96,6 @@ public class MovieActivity extends Activity {
 		case R.id.add_to_watchlist:
 			addMovieToWatchlist();
 			break;
-
 		case R.id.delete_from_watchlist:
 			deleteMovieFromWatchlist();
 			break;
@@ -112,16 +115,28 @@ public class MovieActivity extends Activity {
 		this.localMovieIsSet = true;
 	}
 
+	public void setLocalImdbMovie(ImdbMovie m) {
+		this.localImdbMovie = m;
+	}
+
 	private void addMovieToWatchlist() {
-		LocalStorageTool sTool = new LocalStorageTool(getApplicationContext());
-		sTool.addToWatchlist(this.localMovie);
+		// add to watchlist
+		LocalStorageTool lsTool = new LocalStorageTool(getApplicationContext());
+		lsTool.addToWatchlist(this.localMovie);
 		this.invalidateOptions();
 	}
 
 	private void deleteMovieFromWatchlist() {
-		LocalStorageTool sTool = new LocalStorageTool(getApplicationContext());
-		sTool.deleteFromWatchlist(this.localMovie);
-		this.invalidateOptions();
+		if (this.localImdbMovie != null) {
+			// create statistics
+			StatTool sTool = new StatTool(getApplicationContext());
+			sTool.updateStatistics(this.localMovie, this.localImdbMovie);
+			// delete from watchlist
+			LocalStorageTool lsToolWatchlist = new LocalStorageTool(
+					getApplicationContext());
+			lsToolWatchlist.deleteFromWatchlist(this.localMovie);
+			this.invalidateOptions();
+		}
 	}
 
 	private void initiateFragment() {

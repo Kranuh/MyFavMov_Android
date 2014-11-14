@@ -49,6 +49,21 @@ public class WatchlistFragment extends Fragment {
 		return contentView;
 	}
 	
+	@Override
+	public void onResume() {
+		super.onResume();
+		setWatchList();
+		watchlistListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				((ProfileActivity) getActivity())
+						.navigateToMovieActivity(watchlist.get(arg2).getId());
+			}
+		});
+	}
+	
 
 	private void setWatchList() {
 		Context appContext = getActivity().getApplicationContext();
@@ -57,8 +72,10 @@ public class WatchlistFragment extends Fragment {
 		if (watchlist != null && watchlist.size() > 0) {
 			MovieListAdapter mListAdapter = new MovieListAdapter(getActivity(),
 					R.layout.movcol_listitem, watchlist);
+			watchlistListView.setAdapter(null);
 			watchlistListView.setAdapter(mListAdapter);
 		} else {
+			watchlistListView.setVisibility(View.GONE);
 			noMoviesTxt.setVisibility(View.VISIBLE);
 		}
 	}

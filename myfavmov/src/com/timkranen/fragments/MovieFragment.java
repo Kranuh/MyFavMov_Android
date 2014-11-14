@@ -169,6 +169,7 @@ public class MovieFragment extends Fragment {
 
 	private void imdbMovieLoaded() {
 		if (selectedImdbMovie != null && selectedImdbMovie.getData() != null) {
+			((MovieActivity) getActivity()).setLocalImdbMovie(selectedImdbMovie);
 			rating.setText(selectedImdbMovie.getData().getRating() + "/10");
 			genres.setText("Genres: " + selectedImdbMovie.getData().getGenres());
 			generateMediaFromCast(selectedImdbMovie.getData().getCast_summary());

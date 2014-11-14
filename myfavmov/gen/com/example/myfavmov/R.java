@@ -23,7 +23,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int customTypeface=0x7f010005;
+        public static final int customTypeface=0x7f010001;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -33,7 +33,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int dividerWidth=0x7f010006;
+        public static final int dividerWidth=0x7f010002;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -41,39 +41,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int font=0x7f010004;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int forwardTiltOffset=0x7f010002;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int intensity=0x7f010000;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int scaledIntensity=0x7f010003;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int tiltSensitivity=0x7f010001;
+        public static final int font=0x7f010000;
     }
     public static final class color {
         public static final int apptheme_color=0x7f080002;
@@ -163,32 +131,33 @@ containing a value of this type.
         public static final int logo_start=0x7f020045;
         public static final int noactorimg=0x7f020046;
         public static final int nobackdrop=0x7f020047;
-        public static final int noresults=0x7f020048;
-        public static final int par_background2=0x7f020049;
-        public static final int search_interface=0x7f02004a;
-        public static final int search_searchframe=0x7f02004b;
-        public static final int search_searchframe2=0x7f02004c;
-        public static final int simple_circle=0x7f02004d;
-        public static final int simple_circle_white=0x7f02004e;
-        public static final int tab_selected_focused_orangeactionbarstyle=0x7f02004f;
-        public static final int tab_selected_orangeactionbarstyle=0x7f020050;
-        public static final int tab_selected_pressed_orangeactionbarstyle=0x7f020051;
-        public static final int tab_unselected_focused_orangeactionbarstyle=0x7f020052;
-        public static final int tab_unselected_orangeactionbarstyle=0x7f020053;
-        public static final int tab_unselected_pressed_orangeactionbarstyle=0x7f020054;
-        public static final int textfield_search_background=0x7f020055;
+        public static final int nomovstat=0x7f020048;
+        public static final int noresults=0x7f020049;
+        public static final int par_background2=0x7f02004a;
+        public static final int search_interface=0x7f02004b;
+        public static final int search_searchframe=0x7f02004c;
+        public static final int search_searchframe2=0x7f02004d;
+        public static final int simple_circle=0x7f02004e;
+        public static final int simple_circle_white=0x7f02004f;
+        public static final int tab_selected_focused_orangeactionbarstyle=0x7f020050;
+        public static final int tab_selected_orangeactionbarstyle=0x7f020051;
+        public static final int tab_selected_pressed_orangeactionbarstyle=0x7f020052;
+        public static final int tab_unselected_focused_orangeactionbarstyle=0x7f020053;
+        public static final int tab_unselected_orangeactionbarstyle=0x7f020054;
+        public static final int tab_unselected_pressed_orangeactionbarstyle=0x7f020055;
+        public static final int textfield_search_background=0x7f020056;
     }
     public static final class id {
-        public static final int action_search=0x7f0b0053;
-        public static final int action_settings=0x7f0b0052;
+        public static final int action_search=0x7f0b0055;
+        public static final int action_settings=0x7f0b0054;
         public static final int actionbarview=0x7f0b002b;
-        public static final int add_to_watchlist=0x7f0b0054;
-        public static final int delete_from_watchlist=0x7f0b0055;
+        public static final int add_to_watchlist=0x7f0b0056;
+        public static final int delete_from_watchlist=0x7f0b0057;
         public static final int fragmentContainer=0x7f0b0000;
         public static final int fragmentContainer_movcollection=0x7f0b0002;
         public static final int fragmentContainer_movfragment=0x7f0b0001;
-        public static final int logo=0x7f0b0044;
-        public static final int mainContainer=0x7f0b0043;
+        public static final int logo=0x7f0b0046;
+        public static final int mainContainer=0x7f0b0045;
         public static final int media_listitem_img=0x7f0b0005;
         public static final int media_listitem_layout=0x7f0b0004;
         public static final int media_listitem_txt=0x7f0b0006;
@@ -227,18 +196,18 @@ containing a value of this type.
         public static final int movfragment_trailer_txt=0x7f0b0017;
         public static final int movfragment_trailer_videoview=0x7f0b0014;
         public static final int movfragment_trailer_wrapper=0x7f0b0013;
-        public static final int pBackground=0x7f0b0042;
+        public static final int pBackground=0x7f0b0044;
         public static final int profile_viewpager=0x7f0b0003;
-        public static final int searchLayout=0x7f0b004a;
-        public static final int searchLayout_main=0x7f0b0049;
-        public static final int search_bt_profile=0x7f0b004e;
-        public static final int search_etxt_query=0x7f0b004c;
-        public static final int search_txt_favmov=0x7f0b0045;
-        public static final int search_txt_intro=0x7f0b004b;
-        public static final int search_txt_or=0x7f0b004d;
-        public static final int search_txt_slide=0x7f0b0048;
-        public static final int search_viewPager=0x7f0b0046;
-        public static final int startLayout=0x7f0b0047;
+        public static final int searchLayout=0x7f0b004c;
+        public static final int searchLayout_main=0x7f0b004b;
+        public static final int search_bt_profile=0x7f0b0050;
+        public static final int search_etxt_query=0x7f0b004e;
+        public static final int search_txt_favmov=0x7f0b0047;
+        public static final int search_txt_intro=0x7f0b004d;
+        public static final int search_txt_or=0x7f0b004f;
+        public static final int search_txt_slide=0x7f0b004a;
+        public static final int search_viewPager=0x7f0b0048;
+        public static final int startLayout=0x7f0b0049;
         public static final int statfragment_barlayout1=0x7f0b0036;
         public static final int statfragment_barlayout2=0x7f0b003a;
         public static final int statfragment_barlayout3=0x7f0b003e;
@@ -250,6 +219,8 @@ containing a value of this type.
         public static final int statfragment_genrebar1=0x7f0b0039;
         public static final int statfragment_genrebar2=0x7f0b003d;
         public static final int statfragment_genrebar3=0x7f0b0041;
+        public static final int statfragment_nostats=0x7f0b0042;
+        public static final int statfragment_nostats_label=0x7f0b0043;
         public static final int statfragment_rating=0x7f0b002f;
         public static final int statfragment_rating_circle=0x7f0b002e;
         public static final int statfragment_rating_label=0x7f0b0030;
@@ -262,9 +233,9 @@ containing a value of this type.
         public static final int statfragment_year_circle=0x7f0b0031;
         public static final int statfragment_year_label=0x7f0b0033;
         public static final int topview=0x7f0b002c;
-        public static final int watchlistfragment_actionbar_view=0x7f0b004f;
-        public static final int watchlistfragment_listview=0x7f0b0050;
-        public static final int watchlistfragment_nomoviestxt=0x7f0b0051;
+        public static final int watchlistfragment_actionbar_view=0x7f0b0051;
+        public static final int watchlistfragment_listview=0x7f0b0052;
+        public static final int watchlistfragment_nomoviestxt=0x7f0b0053;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -380,7 +351,7 @@ containing a value of this type.
            @see #HorizontalListView_dividerWidth
          */
         public static final int[] HorizontalListView = {
-            0x010100e0, 0x01010129, 0x010103a5, 0x7f010006
+            0x010100e0, 0x01010129, 0x010103a5, 0x7f010002
         };
         /**
           <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#android_divider}
@@ -416,81 +387,6 @@ containing a value of this type.
           @attr name android:dividerWidth
         */
         public static final int HorizontalListView_dividerWidth = 3;
-        /** Attributes that can be used with a ParallaxImageView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ParallaxImageView_forwardTiltOffset com.example.myfavmov:forwardTiltOffset}</code></td><td></td></tr>
-           <tr><td><code>{@link #ParallaxImageView_intensity com.example.myfavmov:intensity}</code></td><td></td></tr>
-           <tr><td><code>{@link #ParallaxImageView_scaledIntensity com.example.myfavmov:scaledIntensity}</code></td><td></td></tr>
-           <tr><td><code>{@link #ParallaxImageView_tiltSensitivity com.example.myfavmov:tiltSensitivity}</code></td><td></td></tr>
-           </table>
-           @see #ParallaxImageView_forwardTiltOffset
-           @see #ParallaxImageView_intensity
-           @see #ParallaxImageView_scaledIntensity
-           @see #ParallaxImageView_tiltSensitivity
-         */
-        public static final int[] ParallaxImageView = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#forwardTiltOffset}
-          attribute's value can be found in the {@link #ParallaxImageView} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:forwardTiltOffset
-        */
-        public static final int ParallaxImageView_forwardTiltOffset = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#intensity}
-          attribute's value can be found in the {@link #ParallaxImageView} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:intensity
-        */
-        public static final int ParallaxImageView_intensity = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#scaledIntensity}
-          attribute's value can be found in the {@link #ParallaxImageView} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:scaledIntensity
-        */
-        public static final int ParallaxImageView_scaledIntensity = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#tiltSensitivity}
-          attribute's value can be found in the {@link #ParallaxImageView} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:tiltSensitivity
-        */
-        public static final int ParallaxImageView_tiltSensitivity = 1;
         /** Attributes that can be used with a RobotoFont.
            <p>Includes the following attributes:</p>
            <table>
@@ -502,7 +398,7 @@ containing a value of this type.
            @see #RobotoFont_font
          */
         public static final int[] RobotoFont = {
-            0x7f010004
+            0x7f010000
         };
         /**
           <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#font}
@@ -529,7 +425,7 @@ containing a value of this type.
            @see #TypefaceTextView_customTypeface
          */
         public static final int[] TypefaceTextView = {
-            0x7f010005
+            0x7f010001
         };
         /**
           <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#customTypeface}

@@ -8,11 +8,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.timkranen.tmdb.domain.Movie;
+import com.timkranen.tmdb.domain.Statistic;
 import com.timkranen.tmdb.serializer.GsonSerializer;
 
 public class LocalStorageTool {
 	private Context appContext;
-	private String PREF_NAME = "myfavmov.watchlist";
+	private String PREF_NAME = "myfavmov";
 	private SharedPreferences preferences;
 
 	/*
@@ -79,5 +80,22 @@ public class LocalStorageTool {
 			}
 		}
 		return false;
+	}
+	
+	public Statistic getStatistics() {
+		String json = preferences.getString("stats", "");
+		if(!json.isEmpty()) {
+			Statistic s = GsonSerializer.jsonToStatistic(json);
+			return s;
+		} else {
+			return new Statistic();
+		}
+	}
+	
+	public void saveStatistics(Statistic s) {
+		String json = GsonSerializer.StatisticToJson(s);
+		SharedPreferences.Editor editor = preferences.edit();
+		editor.putString("stats", json);
+		editor.commit();
 	}
 }
