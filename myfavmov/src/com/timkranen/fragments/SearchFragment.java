@@ -97,7 +97,7 @@ public class SearchFragment extends Fragment {
 
 			@Override
 			public void done(List<Movie> result) {
-				favmovLogo.clearAnimation();
+				//favmovLogo.clearAnimation();
 				((MainActivity) getActivity())
 						.navigateToMovCollectionActivity(result);
 			}
