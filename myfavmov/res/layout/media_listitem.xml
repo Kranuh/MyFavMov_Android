@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/media_listitem_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#dcdcdc" >
+
+    <ImageView
+        android:id="@+id/media_listitem_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noactorimg" />
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3F000000" >
+
+        <com.timkranen.fonthelpers.TypefaceTextView
+            android:id="@+id/media_listitem_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFF"
+            android:textSize="5pt"
+            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
+    </RelativeLayout>
+
+</RelativeLayout>
