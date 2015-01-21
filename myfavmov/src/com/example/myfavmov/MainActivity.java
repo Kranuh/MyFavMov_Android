@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 		Intent intent = getIntent();
 		if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
 			String query = intent.getStringExtra(SearchManager.QUERY);
-			SearchTask sTask = new SearchTask(query) {
+			SearchTask sTask = new SearchTask(query, this) {
 				
 				@Override
 				public void ioExceptionRaised() {
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 				}
 				
 				@Override
-				public void done(List<Movie> result) {
+				public void done(List<Movie> result, Activity activity) {
 					navigateToMovCollectionActivity(result);
 					finish();
 				}

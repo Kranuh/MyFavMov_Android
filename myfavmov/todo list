@@ -1,6 +1,4 @@
 TODO list:
-- search inteface implemented in every activity
-- update background graphics watchlist
 - make a go to watchlist option in options menu
 - startup graphics? mainactivity
 - stop running async tasks when onpause

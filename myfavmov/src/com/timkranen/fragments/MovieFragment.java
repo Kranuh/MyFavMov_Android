@@ -66,6 +66,11 @@ public class MovieFragment extends Fragment {
 
 	private Handler mHandler = new Handler();
 
+	// tasks
+	private ImdbMovieFetcher imdbFetcher;
+	private MovieFetcher mFetcher;
+	private BackdropHandler backdropHandler;
+
 	public static MovieFragment newInstance(int movieId) {
 		MovieFragment mFragment = new MovieFragment();
 		Bundle args = new Bundle();
@@ -83,7 +88,7 @@ public class MovieFragment extends Fragment {
 		setMovie();
 		setHasOptionsMenu(true);
 		initComponents();
-		MovieFetcher mFetcher = new MovieFetcher();
+		mFetcher = new MovieFetcher();
 		mFetcher.execute();
 		return contentView;
 	}
@@ -129,6 +134,20 @@ public class MovieFragment extends Fragment {
 				.findViewById(R.id.movfragment_cast_nocast_txt);
 	}
 
+	@Override
+	public void onPause() {
+		super.onPause();
+		if (imdbFetcher != null) {
+			imdbFetcher.cancel(true);
+		}
+		if (mFetcher != null) {
+			mFetcher.cancel(true);
+		}
+		if (backdropHandler != null) {
+			backdropHandler.cancel(true);
+		}
+	}
+
 	private void movieDoneLoading() {
 		((MovieActivity) getActivity()).setActionBarTitle(selectedTmdbMovie
 				.getTitle());
@@ -138,8 +157,8 @@ public class MovieFragment extends Fragment {
 				selectedTmdbMovie.getBackdropPath());
 		((MovieActivity) getActivity()).invalidateOptions();
 		startImdbMovieLoad(selectedTmdbMovie.getImdbId());
-		BackdropHandler bHandler = new BackdropHandler();
-		bHandler.execute();
+		backdropHandler = new BackdropHandler();
+		backdropHandler.execute();
 
 		// initiate the movie data that was retrieved from tmdb
 		movieTitle.setText(selectedTmdbMovie.getTitle() + " ("
@@ -163,13 +182,14 @@ public class MovieFragment extends Fragment {
 
 	private void startImdbMovieLoad(String imdbId) {
 		String[] params = new String[] { imdbId };
-		ImdbMovieFetcher mFetcher = new ImdbMovieFetcher();
-		mFetcher.execute(params);
+		imdbFetcher = new ImdbMovieFetcher();
+		imdbFetcher.execute(params);
 	}
 
 	private void imdbMovieLoaded() {
 		if (selectedImdbMovie != null && selectedImdbMovie.getData() != null) {
-			((MovieActivity) getActivity()).setLocalImdbMovie(selectedImdbMovie);
+			((MovieActivity) getActivity())
+					.setLocalImdbMovie(selectedImdbMovie);
 			rating.setText(selectedImdbMovie.getData().getRating() + "/10");
 			genres.setText("Genres: " + selectedImdbMovie.getData().getGenres());
 			generateMediaFromCast(selectedImdbMovie.getData().getCast_summary());

@@ -12,8 +12,6 @@
         android:layout_height="fill_parent"
         android:scaleType="centerCrop" >
     </com.timkranen.parallaxview.ParallaxImageView>
-    
-    
 
     <View
         android:id="@+id/actionbarview"
@@ -141,113 +139,115 @@
         android:layout_below="@id/statfragment_genre_label"
         android:layout_marginTop="3dp" >
 
-        <FrameLayout
-            android:id="@+id/statfragment_firstgenre_text_layout"
+        <com.timkranen.fonthelpers.TypefaceTextView
+            android:id="@+id/statfragment_firstgenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="2dp"
-            android:background="#fff"
-            android:padding="2dp" >
-
-            <com.timkranen.fonthelpers.TypefaceTextView
-                android:id="@+id/statfragment_firstgenre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textColor="#f80"
-                android:textSize="7pt"
-                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
-        </FrameLayout>
+            android:text=""
+            android:paddingBottom="17dp"
+            android:textColor="#fff"
+            android:textSize="7pt"
+            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
 
         <View
             android:id="@+id/statfragment_genrebar1"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:background="#fff"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle_genre"
             android:visibility="invisible" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignBaseline="@+id/statfragment_genrebar1"
+            android:layout_marginTop="16dp"
+            android:background="#fff" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/statfragment_barlayout2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/statfragment_barlayout1" >
+        android:layout_below="@id/statfragment_barlayout1"
+        android:layout_marginTop="10dp" >
 
-        <FrameLayout
-            android:id="@+id/statfragment_secondgenre_text_layout"
+        <com.timkranen.fonthelpers.TypefaceTextView
+            android:id="@+id/statfragment_secondgenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="2dp"
-            android:background="#fff"
-            android:padding="2dp" >
-
-            <com.timkranen.fonthelpers.TypefaceTextView
-                android:id="@+id/statfragment_secondgenre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textColor="#f80"
-                android:textSize="7pt"
-                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
-        </FrameLayout>
+            android:text=""
+            android:paddingBottom="17dp"
+            android:textColor="#fff"
+            android:textSize="7pt"
+            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
 
         <View
             android:id="@+id/statfragment_genrebar2"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginTop="3dp"
-            android:background="#fff"
+            android:background="@drawable/circle_genre"
             android:visibility="invisible" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignBaseline="@+id/statfragment_genrebar2"
+            android:layout_marginTop="16dp"
+            android:background="#fff" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/statfragment_barlayout3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/statfragment_barlayout2" >
+        android:layout_below="@id/statfragment_barlayout2"
+        android:layout_marginTop="10dp" >
 
-        <FrameLayout
-            android:id="@+id/statfragment_thirdgenre_text_layout"
+        <com.timkranen.fonthelpers.TypefaceTextView
+            android:id="@+id/statfragment_thirdgenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="2dp"
-            android:background="#fff"
-            android:padding="2dp" >
-
-            <com.timkranen.fonthelpers.TypefaceTextView
-                android:id="@+id/statfragment_thirdgenre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textColor="#f80"
-                android:textSize="7pt"
-                geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
-        </FrameLayout>
+            android:text=""
+           android:paddingBottom="17dp"
+            android:textColor="#fff"
+            android:textSize="7pt"
+            geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
 
         <View
             android:id="@+id/statfragment_genrebar3"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginTop="3dp"
-            android:background="#fff"
+            android:background="@drawable/circle_genre"
             android:visibility="invisible" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignBaseline="@+id/statfragment_genrebar3"
+            android:layout_marginTop="16dp"
+            android:background="#fff" />
     </RelativeLayout>
 
     <ImageView
         android:id="@+id/statfragment_nostats"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/nomovstat"
         android:layout_centerInParent="true"
+        android:src="@drawable/nomovstat"
         android:visibility="gone" />
-    
-     <com.timkranen.fonthelpers.TypefaceTextView
+
+    <com.timkranen.fonthelpers.TypefaceTextView
         android:id="@+id/statfragment_nostats_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -255,10 +255,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="1dp"
         android:gravity="center"
-        android:text="You haven't watched any movies yet"
+        android:text="You haven&apos;t watched any movies yet"
         android:textColor="#ffffff"
         android:textSize="8pt"
-        geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF"
-        android:visibility="gone" />
+        android:visibility="gone"
+        geekui:customTypeface="fonts/ROBOTO-LIGHT.TTF" />
 
 </RelativeLayout>

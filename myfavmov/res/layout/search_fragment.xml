@@ -56,7 +56,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="Slide to start"
+                        android:text="Slide up to start"
                         android:textColor="#FFFFFF"
                         android:textSize="15pt"
                         geekui:customTypeface="fonts/ROBOTO-REGULAR.TTF" />

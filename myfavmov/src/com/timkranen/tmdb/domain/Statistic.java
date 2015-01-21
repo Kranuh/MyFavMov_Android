@@ -1,6 +1,7 @@
 package com.timkranen.tmdb.domain;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -83,9 +84,14 @@ public class Statistic {
 	}
 
 	public double getAvgRating() {
-		double avg = communalRating / watchCount;
+		Double avg = communalRating / watchCount;
+		
 		DecimalFormat dFormat = new DecimalFormat("#.#");
-		return Double.valueOf(dFormat.format(avg));
+		DecimalFormatSymbols dFSymbols = new DecimalFormatSymbols();
+		dFSymbols.setDecimalSeparator('.');
+		dFormat.setDecimalFormatSymbols(dFSymbols);
+		double returnValue = Double.valueOf(dFormat.format(avg));
+		return returnValue;
 	}
 	
 	public List<Map.Entry<String, Integer>> getFavGenres() { //bad practice but its doable because the list is super tiny
@@ -125,6 +131,10 @@ public class Statistic {
 			totalDate += allReleaseDates.get(i);
 		}
 		
+		if(allReleaseDates.size() != 0) {
 		return totalDate / allReleaseDates.size();
+		} else {
+			return 1;
+		}
 	}
 }

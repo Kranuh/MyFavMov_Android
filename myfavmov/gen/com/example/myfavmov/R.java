@@ -44,9 +44,9 @@ containing a value of this type.
         public static final int font=0x7f010000;
     }
     public static final class color {
-        public static final int apptheme_color=0x7f080002;
-        public static final int mfm_darkgrey=0x7f080000;
-        public static final int mfm_orange=0x7f080001;
+        public static final int apptheme_color=0x7f060002;
+        public static final int mfm_darkgrey=0x7f060000;
+        public static final int mfm_orange=0x7f060001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -55,8 +55,8 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f090000;
-        public static final int activity_vertical_margin=0x7f090001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int actionbar_bg_full=0x7f020000;
@@ -120,44 +120,45 @@ containing a value of this type.
         public static final int btn_pressed=0x7f02003a;
         public static final int btn_selector_standard=0x7f02003b;
         public static final int card=0x7f02003c;
-        public static final int drivein=0x7f02003d;
-        public static final int drivethru=0x7f02003e;
-        public static final int hobbiton=0x7f02003f;
-        public static final int ic_action_addwatchlist=0x7f020040;
-        public static final int ic_action_search=0x7f020041;
-        public static final int ic_action_watchlist=0x7f020042;
-        public static final int ic_delete_from_watchlist=0x7f020043;
-        public static final int ic_launcher=0x7f020044;
-        public static final int logo_start=0x7f020045;
-        public static final int noactorimg=0x7f020046;
-        public static final int nobackdrop=0x7f020047;
-        public static final int nomovstat=0x7f020048;
-        public static final int noresults=0x7f020049;
-        public static final int par_background2=0x7f02004a;
-        public static final int search_interface=0x7f02004b;
-        public static final int search_searchframe=0x7f02004c;
-        public static final int search_searchframe2=0x7f02004d;
-        public static final int simple_circle=0x7f02004e;
-        public static final int simple_circle_white=0x7f02004f;
-        public static final int tab_selected_focused_orangeactionbarstyle=0x7f020050;
-        public static final int tab_selected_orangeactionbarstyle=0x7f020051;
-        public static final int tab_selected_pressed_orangeactionbarstyle=0x7f020052;
-        public static final int tab_unselected_focused_orangeactionbarstyle=0x7f020053;
-        public static final int tab_unselected_orangeactionbarstyle=0x7f020054;
-        public static final int tab_unselected_pressed_orangeactionbarstyle=0x7f020055;
-        public static final int textfield_search_background=0x7f020056;
+        public static final int circle_genre=0x7f02003d;
+        public static final int drivein=0x7f02003e;
+        public static final int drivethru=0x7f02003f;
+        public static final int hobbiton=0x7f020040;
+        public static final int ic_action_addwatchlist=0x7f020041;
+        public static final int ic_action_search=0x7f020042;
+        public static final int ic_action_watchlist=0x7f020043;
+        public static final int ic_delete_from_watchlist=0x7f020044;
+        public static final int ic_launcher=0x7f020045;
+        public static final int logo_start=0x7f020046;
+        public static final int noactorimg=0x7f020047;
+        public static final int nobackdrop=0x7f020048;
+        public static final int nomovstat=0x7f020049;
+        public static final int noresults=0x7f02004a;
+        public static final int par_background2=0x7f02004b;
+        public static final int search_interface=0x7f02004c;
+        public static final int search_searchframe=0x7f02004d;
+        public static final int search_searchframe2=0x7f02004e;
+        public static final int simple_circle=0x7f02004f;
+        public static final int simple_circle_white=0x7f020050;
+        public static final int tab_selected_focused_orangeactionbarstyle=0x7f020051;
+        public static final int tab_selected_orangeactionbarstyle=0x7f020052;
+        public static final int tab_selected_pressed_orangeactionbarstyle=0x7f020053;
+        public static final int tab_unselected_focused_orangeactionbarstyle=0x7f020054;
+        public static final int tab_unselected_orangeactionbarstyle=0x7f020055;
+        public static final int tab_unselected_pressed_orangeactionbarstyle=0x7f020056;
+        public static final int textfield_search_background=0x7f020057;
     }
     public static final class id {
-        public static final int action_search=0x7f0b0055;
-        public static final int action_settings=0x7f0b0054;
+        public static final int action_search=0x7f0b0052;
+        public static final int action_settings=0x7f0b0051;
         public static final int actionbarview=0x7f0b002b;
-        public static final int add_to_watchlist=0x7f0b0056;
-        public static final int delete_from_watchlist=0x7f0b0057;
+        public static final int add_to_watchlist=0x7f0b0053;
+        public static final int delete_from_watchlist=0x7f0b0054;
         public static final int fragmentContainer=0x7f0b0000;
         public static final int fragmentContainer_movcollection=0x7f0b0002;
         public static final int fragmentContainer_movfragment=0x7f0b0001;
-        public static final int logo=0x7f0b0046;
-        public static final int mainContainer=0x7f0b0045;
+        public static final int logo=0x7f0b0043;
+        public static final int mainContainer=0x7f0b0042;
         public static final int media_listitem_img=0x7f0b0005;
         public static final int media_listitem_layout=0x7f0b0004;
         public static final int media_listitem_txt=0x7f0b0006;
@@ -196,46 +197,43 @@ containing a value of this type.
         public static final int movfragment_trailer_txt=0x7f0b0017;
         public static final int movfragment_trailer_videoview=0x7f0b0014;
         public static final int movfragment_trailer_wrapper=0x7f0b0013;
-        public static final int pBackground=0x7f0b0044;
+        public static final int pBackground=0x7f0b0041;
         public static final int profile_viewpager=0x7f0b0003;
-        public static final int searchLayout=0x7f0b004c;
-        public static final int searchLayout_main=0x7f0b004b;
-        public static final int search_bt_profile=0x7f0b0050;
-        public static final int search_etxt_query=0x7f0b004e;
-        public static final int search_txt_favmov=0x7f0b0047;
-        public static final int search_txt_intro=0x7f0b004d;
-        public static final int search_txt_or=0x7f0b004f;
-        public static final int search_txt_slide=0x7f0b004a;
-        public static final int search_viewPager=0x7f0b0048;
-        public static final int startLayout=0x7f0b0049;
+        public static final int searchLayout=0x7f0b0049;
+        public static final int searchLayout_main=0x7f0b0048;
+        public static final int search_bt_profile=0x7f0b004d;
+        public static final int search_etxt_query=0x7f0b004b;
+        public static final int search_txt_favmov=0x7f0b0044;
+        public static final int search_txt_intro=0x7f0b004a;
+        public static final int search_txt_or=0x7f0b004c;
+        public static final int search_txt_slide=0x7f0b0047;
+        public static final int search_viewPager=0x7f0b0045;
+        public static final int startLayout=0x7f0b0046;
         public static final int statfragment_barlayout1=0x7f0b0036;
-        public static final int statfragment_barlayout2=0x7f0b003a;
-        public static final int statfragment_barlayout3=0x7f0b003e;
+        public static final int statfragment_barlayout2=0x7f0b0039;
+        public static final int statfragment_barlayout3=0x7f0b003c;
         public static final int statfragment_bg=0x7f0b002a;
         public static final int statfragment_divider=0x7f0b0034;
-        public static final int statfragment_firstgenre=0x7f0b0038;
-        public static final int statfragment_firstgenre_text_layout=0x7f0b0037;
+        public static final int statfragment_firstgenre=0x7f0b0037;
         public static final int statfragment_genre_label=0x7f0b0035;
-        public static final int statfragment_genrebar1=0x7f0b0039;
-        public static final int statfragment_genrebar2=0x7f0b003d;
-        public static final int statfragment_genrebar3=0x7f0b0041;
-        public static final int statfragment_nostats=0x7f0b0042;
-        public static final int statfragment_nostats_label=0x7f0b0043;
+        public static final int statfragment_genrebar1=0x7f0b0038;
+        public static final int statfragment_genrebar2=0x7f0b003b;
+        public static final int statfragment_genrebar3=0x7f0b003e;
+        public static final int statfragment_nostats=0x7f0b003f;
+        public static final int statfragment_nostats_label=0x7f0b0040;
         public static final int statfragment_rating=0x7f0b002f;
         public static final int statfragment_rating_circle=0x7f0b002e;
         public static final int statfragment_rating_label=0x7f0b0030;
-        public static final int statfragment_secondgenre=0x7f0b003c;
-        public static final int statfragment_secondgenre_text_layout=0x7f0b003b;
-        public static final int statfragment_thirdgenre=0x7f0b0040;
-        public static final int statfragment_thirdgenre_text_layout=0x7f0b003f;
+        public static final int statfragment_secondgenre=0x7f0b003a;
+        public static final int statfragment_thirdgenre=0x7f0b003d;
         public static final int statfragment_top_layout=0x7f0b002d;
         public static final int statfragment_year=0x7f0b0032;
         public static final int statfragment_year_circle=0x7f0b0031;
         public static final int statfragment_year_label=0x7f0b0033;
         public static final int topview=0x7f0b002c;
-        public static final int watchlistfragment_actionbar_view=0x7f0b0051;
-        public static final int watchlistfragment_listview=0x7f0b0052;
-        public static final int watchlistfragment_nomoviestxt=0x7f0b0053;
+        public static final int watchlistfragment_actionbar_view=0x7f0b004e;
+        public static final int watchlistfragment_listview=0x7f0b004f;
+        public static final int watchlistfragment_nomoviestxt=0x7f0b0050;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -258,39 +256,19 @@ containing a value of this type.
         public static final int profile=0x7f0a0003;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
-        public static final int search_hint=0x7f060006;
-        public static final int title_activity_movie=0x7f060004;
-        public static final int title_activity_movie_collection=0x7f060003;
-        public static final int title_activity_profile=0x7f060005;
+        public static final int action_settings=0x7f080001;
+        public static final int app_name=0x7f080000;
+        public static final int hello_world=0x7f080002;
+        public static final int search_hint=0x7f080006;
+        public static final int title_activity_movie=0x7f080004;
+        public static final int title_activity_movie_collection=0x7f080003;
+        public static final int title_activity_profile=0x7f080005;
     }
     public static final class style {
-        public static final int ActionBarWidget=0x7f070006;
+        public static final int ActionBarWidget=0x7f090006;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
     
 
@@ -311,24 +289,22 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f090001;
         /**  ActionBar styles 
          */
-        public static final int MyActionBar=0x7f070004;
-        public static final int MyTabStyle=0x7f070005;
+        public static final int MyActionBar=0x7f090004;
+        public static final int MyTabStyle=0x7f090005;
         /**  the theme applied to the application or activity 
          */
-        public static final int OrangeActionBarTheme=0x7f070003;
-        public static final int ProgressBarAppTheme=0x7f070007;
-        public static final int RobotoButton=0x7f070002;
-        public static final int ToggleAppTheme=0x7f070008;
-        public static final int _AppTheme=0x7f070009;
+        public static final int OrangeActionBarTheme=0x7f090003;
+        public static final int ProgressBarAppTheme=0x7f090007;
+        public static final int RobotoButton=0x7f090002;
+        public static final int ToggleAppTheme=0x7f090008;
+        public static final int _AppTheme=0x7f090009;
     }
     public static final class xml {
         public static final int searchable=0x7f050000;
@@ -340,9 +316,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #HorizontalListView_android_divider com.example.myfavmov:android_divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #HorizontalListView_android_fadingEdgeLength com.example.myfavmov:android_fadingEdgeLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #HorizontalListView_android_requiresFadingEdge com.example.myfavmov:android_requiresFadingEdge}</code></td><td></td></tr>
+           <tr><td><code>{@link #HorizontalListView_android_divider android:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #HorizontalListView_android_fadingEdgeLength android:fadingEdgeLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #HorizontalListView_android_requiresFadingEdge android:requiresFadingEdge}</code></td><td></td></tr>
            <tr><td><code>{@link #HorizontalListView_dividerWidth com.example.myfavmov:dividerWidth}</code></td><td></td></tr>
            </table>
            @see #HorizontalListView_android_divider
@@ -354,21 +330,21 @@ containing a value of this type.
             0x010100e0, 0x01010129, 0x010103a5, 0x7f010002
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#android_divider}
+          <p>This symbol is the offset where the {@link android.R.attr#divider}
           attribute's value can be found in the {@link #HorizontalListView} array.
-          @attr name android:android_divider
+          @attr name android:divider
         */
         public static final int HorizontalListView_android_divider = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#android_fadingEdgeLength}
+          <p>This symbol is the offset where the {@link android.R.attr#fadingEdgeLength}
           attribute's value can be found in the {@link #HorizontalListView} array.
-          @attr name android:android_fadingEdgeLength
+          @attr name android:fadingEdgeLength
         */
         public static final int HorizontalListView_android_fadingEdgeLength = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.myfavmov.R.attr#android_requiresFadingEdge}
+          <p>This symbol is the offset where the {@link android.R.attr#requiresFadingEdge}
           attribute's value can be found in the {@link #HorizontalListView} array.
-          @attr name android:android_requiresFadingEdge
+          @attr name android:requiresFadingEdge
         */
         public static final int HorizontalListView_android_requiresFadingEdge = 2;
         /**
@@ -384,7 +360,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:dividerWidth
+          @attr name com.example.myfavmov:dividerWidth
         */
         public static final int HorizontalListView_dividerWidth = 3;
         /** Attributes that can be used with a RobotoFont.
@@ -411,7 +387,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:font
+          @attr name com.example.myfavmov:font
         */
         public static final int RobotoFont_font = 0;
         /** Attributes that can be used with a TypefaceTextView.
@@ -438,7 +414,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:customTypeface
+          @attr name com.example.myfavmov:customTypeface
         */
         public static final int TypefaceTextView_customTypeface = 0;
     };

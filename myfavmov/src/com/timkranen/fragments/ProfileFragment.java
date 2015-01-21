@@ -105,12 +105,6 @@ public class ProfileFragment extends Fragment {
 				.findViewById(R.id.statfragment_genrebar2);
 		thirdGenreBar = (View) contentView
 				.findViewById(R.id.statfragment_genrebar3);
-		firstGenreTextLayout = (FrameLayout) contentView
-				.findViewById(R.id.statfragment_firstgenre_text_layout);
-		secondGenreTextLayout = (FrameLayout) contentView
-				.findViewById(R.id.statfragment_secondgenre_text_layout);
-		thirdGenreTextLayout = (FrameLayout) contentView
-				.findViewById(R.id.statfragment_thirdgenre_text_layout);
 
 		// no stats ui comps
 		noStatsImg = (ImageView) contentView
@@ -190,9 +184,9 @@ public class ProfileFragment extends Fragment {
 			thirdGenreBar.startAnimation(getSlideIn(posvalues[1]));
 		}
 
-		firstGenreTextLayout.bringToFront();
-		secondGenreTextLayout.bringToFront();
-		thirdGenreTextLayout.bringToFront();
+		firstGenreBar.bringToFront();
+		secondGenreBar.bringToFront();
+		thirdGenreBar.bringToFront();
 	}
 
 	/*
@@ -204,7 +198,8 @@ public class ProfileFragment extends Fragment {
 		float[] posvalues = { 0, 0, 0 };
 		List<Map.Entry<String, Integer>> favs = currentStats.getFavGenres();
 		// set maxval
-		posvalues[0] = -.05f;
+		
+		posvalues[0] = .9f -.05f;
 		// the values are the difference between max and count
 		int i = 0;
 		int max = 0;
@@ -213,7 +208,7 @@ public class ProfileFragment extends Fragment {
 				if (entry.getValue() != max) {
 					int percentage = (entry.getValue() * 100) / max;
 					float fin = (float) (percentage / 100.0);
-					posvalues[i] = -fin;
+					posvalues[i] = .9f -fin;
 				} else {
 					posvalues[i] = -.05f;
 				}

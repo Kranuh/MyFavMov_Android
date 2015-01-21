@@ -3,6 +3,7 @@ package com.timkranen.fragments;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -87,7 +88,7 @@ public class SearchFragment extends Fragment {
 
 	private void startSearch(String query) {
 		startLoadingAnimation();
-		SearchTask sTask = new SearchTask(query) {
+		SearchTask sTask = new SearchTask(query, this.getActivity()) {
 
 			@Override
 			public void ioExceptionRaised() {
@@ -96,11 +97,19 @@ public class SearchFragment extends Fragment {
 			}
 
 			@Override
-			public void done(List<Movie> result) {
-				//favmovLogo.clearAnimation();
+			public void done(List<Movie> result, Activity activity) {
+				activity.runOnUiThread(new Runnable() {
+
+					@Override
+					public void run() {
+						favmovLogo.clearAnimation();
+					}
+					
+				});
 				((MainActivity) getActivity())
 						.navigateToMovCollectionActivity(result);
 			}
+
 		};
 
 		Thread searchThread = new Thread(sTask);
@@ -130,9 +139,9 @@ public class SearchFragment extends Fragment {
 		favmovLogo = (ImageView) contentView.findViewById(R.id.logo);
 		profileButton = (Button) contentView
 				.findViewById(R.id.search_bt_profile);
-		
+
 		profileButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				((MainActivity) getActivity()).navigateToProfileActivity();
